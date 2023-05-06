@@ -1,0 +1,42 @@
+/*Questions? Message Prince Headache on Github!
+Auto Card Link Plugin by https://github.com/nekoshita
+
+I like this plugin, but didn't like the fact that the cards were white on my dark theme. 
+This snippet makes it much friendlier to a wider array of themes and color schemes.
+Additionally, I've tried to fix as much quirky behavior as I could to make it as consistently handsome as possible.*/
+
+
+/*Makes the background of the card transparent.*/
+.block-language-cardlink .auto-card-link-card {
+	background-color: transparent;
+}
+
+/*This changes the border of the card to match your accent color*/
+.auto-card-link-container{
+	border-color:var(--ui1);
+}
+
+
+/*Makes the thumbnail's radius match the border.*/
+.auto-card-link-thumbnail-img{
+	border-radius: 8px;
+}
+
+
+/*Following lines change the text colors to be legible on dark backgrounds. If you use light themes it should work, too.*/
+.auto-card-link-title{
+	color:var(--italic-color);
+	-webkit-line-clamp: 2;
+
+}
+
+.auto-card-link-description{
+	color:var(--inline-code-normal);
+	-webkit-line-clamp:2;
+
+}
+
+.auto-card-link-host{
+	color:var(--text-faint);
+}
+
