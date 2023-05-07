@@ -1,0 +1,257 @@
+/*Auto Card Link- Settings
+Auto Card Link Plugin by https://github.com/nekoshita
+Find this and other snippets in my repository: https://github.com/PrinceHeadache/Princey-Obsidian-Snippets
+
+I like this plugin, but didn't like the fact that the cards were white on my dark theme. 
+I've tried to fix as much quirky behavior as I could to make it as consistently handsome as possible by default,
+with new style settings support for those who aren't happy with the default appearance.
+*/
+
+/* @settings
+name: Princey Auto Card Link Settings
+id: princey-auto-card-link-settings
+settings:
+
+# Adjust Card Elements
+-
+    id: princey-auto-card-title
+    title: Title
+    description: Customize card's title style and color
+    type: heading
+    level: 1
+    collapsed: true
+-
+		id: princey-auto-card-title-style
+    	title: Title Style
+    	type: variable-select
+    	options:
+    		- value: bold
+    	  	label: Bold
+    		- value: italic
+    	  	label: Italic
+    		- value: normal
+    	  	label: Normal
+    	default: italic
+-
+		id: princey-auto-card-title-color
+    	title: Title Color
+    	type: variable-color
+    	opacity: true
+    	format: hex
+    	default: #B4BEFE
+-
+    id: princey-auto-card-body
+    title: Body
+    description: Customize card's body style and color
+    type: heading
+    level: 1
+    collapsed: true
+-
+		id: princey-auto-card-body-style
+    	title: Body Style
+    	type: variable-select
+    	options:
+    		- value: bold
+    	  	label: Bold
+    		- value: italic
+    	  	label: Italic
+    		- value: normal
+    	  	label: Normal
+    	default: normal
+-
+		id: princey-auto-card-body-color
+    	title: Body Color
+    	type: variable-color
+    	opacity: true
+    	format: hex
+    	default: #d5deec
+-
+    id: princey-auto-card-background
+    title: Background
+    description: Customize card's background style and color
+    type: heading
+    level: 1
+    collapsed: true
+-
+		id: princey-auto-card-background-style-dot
+    	title: Dotted Background
+    	description: Optional background styles. I use these dots for my code blocks and callouts, too.
+    	type: class-toggle
+    	default: false
+
+-
+		id: princey-auto-card-background-color
+    	title: Background Color
+    	type: variable-color
+    	opacity: true
+    	format: hex
+    	default: #00000000
+-
+    id: princey-auto-card-border
+    title: Border
+    description: Customize card's border style, color, and radius.
+    type: heading
+    level: 1
+    collapsed: true
+-
+		id: princey-auto-card-border-style
+    	title: Border Style
+    	type: variable-select
+    	options:
+    		- value: solid
+    	  	label: Solid
+    		- value: dotted
+    	  	label: Dotted
+    		- value: dashed
+    	  	label: Dashed
+    		- value: double
+    	  	label: Double
+    	default: solid
+-
+		id: princey-auto-card-border-color
+    	title: Border Color
+    	type: variable-color
+    	opacity: true
+    	format: hex
+    	default: #B4BEFE
+-
+		id: princey-auto-card-border-width
+		title: Border Width
+		type: variable-number
+		default: 1.5
+		format: px
+-
+	id: princey-auto-card-other
+    title: Other Settings
+    description: Assorted settings
+    type: heading
+    level: 1
+    collapsed: true
+-
+		id: princey-auto-card-line-width
+    	title: Constrain to legible line width
+    	description: Useful if you use a theme or css that allows certain elements to extend past the legible line length. I think these are ugly when they're very wide.
+    	type: class-toggle
+    	default: true
+
+# Credit and Info
+-
+    id: Credit-Info
+    title: Credit and Info
+    description: Credit for this snippet and where to find my other work.
+    type: heading
+    level: 1
+    collapsed: true
+
+-
+    id: Credit
+    title: Credit
+    description: The [Auto Card Link](https://github.com/nekoshita/obsidian-auto-card-link) plugin was created by Nekoshita.
+    type: info-text
+    markdown: true
+-
+    id: Github
+    title: My Github
+    description: Find this and other snippets at my [Github Repository](https://github.com/PrinceHeadache/Princey-Obsidian-Snippets)
+    type: info-text
+    markdown: true
+-
+    id: Issues
+    title: Report Issues
+    description: Find an issue? Please report it [here](https://github.com/PrinceHeadache/Princey-Obsidian-Snippets/issues)
+    type: info-text
+    markdown: true
+-
+    id: Ko-fi
+    title: Buy me a Coffee?
+    description: If you like this snippet and would like to buy me a coffee, you can do so [here](https://ko-fi.com/princeheadache). Thank you! 
+    type: info-text
+    markdown: true
+-
+*/
+
+
+:root {
+	--princey-auto-card-title-style: italic;
+	--princey-auto-card-title-color: #B4BEFE;
+	--princey-auto-card-body-style: normal;
+	--princey-auto-card-body-color: #d5deec;
+	--princey-auto-card-background-color:#00000000;
+	--princey-auto-card-border-style: solid;
+	--princey-auto-card-border-color: #B4BEFE;
+	--princey-auto-card-border-width: 1.5px;
+
+}
+
+/*Changes the color of the background of the card.*/
+.block-language-cardlink .auto-card-link-card {
+	background-color: var(--princey-auto-card-background-color);
+}
+/*Optional background patterns*/
+/* Dotted background style */
+body:is(.princey-auto-card-background-style-dot) .block-language-cardlink .auto-card-link-card {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='1' fill='%239A8DF7' fill-opacity='0.05'  /%3E%3C/svg%3E");
+}
+/*This changes the border of the card to match your accent color, and constrains the link card to specified width.*/
+.auto-card-link-container{
+	border-color:var(--princey-auto-card-border-color);
+	border-style:var(--princey-auto-card-border-style);
+	border-width:var(--princey-auto-card-border-width);
+}
+body:is(.princey-auto-card-line-width) .auto-card-link-container{
+	max-width: var(--file-line-width);
+}
+/*Makes the thumbnail's radius match the border.*/
+.auto-card-link-thumbnail-img{
+	border-radius: 8px;
+}
+
+
+/*Following lines change the text colors and styles*/
+
+.auto-card-link-title{
+	color:var(--princey-auto-card-title-color);
+	font-style:var(--princey-auto-card-title-style);
+	-webkit-line-clamp: 2;
+
+}
+
+.auto-card-link-description{
+	color:var(--princey-auto-card-body-color);
+	font-style:var(--princey-auto-card-body-style);
+	-webkit-line-clamp:2;
+
+}
+
+.auto-card-link-host{
+	color:var(--text-faint);
+}
+
+
+/*Styling for the Style Settings*/
+[data-id="princey-auto-card-link-settings"] .style-settings-collapse-indicator {
+    display: none;
+}
+[data-id="princey-auto-card-link-settings"] .setting-item-name {
+  color: var(--princey-auto-card-title-color);
+}
+[data-id="princey-auto-card-link-settings"] .setting-item-name::before {
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--princey-auto-card-title-color);
+    vertical-align: middle;
+-webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3e%3crect width='20' height='14' x='2' y='5' rx='2'/%3e%3cline x1='2' x2='22' y1='10' y2='10'/%3e%3c/svg%3e");
+}
+[data-id="Ko-fi"] .setting-item-name::before {
+    content: "";
+    display: inline-block;
+    margin-right: 6px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--princey-color-one);
+    vertical-align: middle;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" x2="6" y1="2" y2="4"></line><line x1="10" x2="10" y1="2" y2="4"></line><line x1="14" x2="14" y1="2" y2="4"></line></svg>');
+  }
