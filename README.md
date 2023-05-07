@@ -10,7 +10,7 @@ This snippet adds folder and file icons next to your items in Spaces
 Supported file types with unique icons are:
 - Markdown files: .md
 - Canvas files: .canvas
-- [Excalidraw](https://github.com/excalidraw/excalidraw_ plugin) files: .excalidraw.md
+- [Excalidraw](https://github.com/excalidraw/excalidraw_) plugin files: .excalidraw.md
 - [Notion-Like Tables](https://github.com/trey-wallis/obsidian-notion-like-tables) plugin files: .table
 - MAKE.md context files: .context
 - Archive files: .zip, .7z
