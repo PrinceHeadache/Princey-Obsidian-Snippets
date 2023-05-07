@@ -26,6 +26,12 @@ Supported file types with unique icons are:
 
 Includes [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) options for customizing the colors.
 
+# Princey [Auto Card Link](https://github.com/nekoshita/obsidian-auto-card-link) Settings
+![beforeandafter](https://user-images.githubusercontent.com/126889088/236698794-180013bf-cbf6-4dd2-8112-7817a4703095.png)
+
+I really liked this plugin, but by default it made white cards, which bothered me as a dark theme user. This snippet adds style settings support for changing almost everything about the link card! I've made the default settings in such a way that it should look handsome on a wide variety of themes by default, but it's easy to change it to suit your aesthetic preferences, now.
+
+
 # To-do:
 - [ ] Add comments and documentation to all snippets that don't already have them for the sake of clarity.
 - [ ] Assign credit where I haven't already.
