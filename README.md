@@ -3,7 +3,7 @@ This is my repository for storing and sharing CSS snippets for Obsidian.
 
 # [MAKE.md](https://github.com/Make-md/makemd) Snippets
 ## Princey Spaces Colors:
-This snippet adds folder and file icons next to your items in Spaces
+This snippet adds folder and file icons next to your items in Spaces, and creates a color pattern effect.
 
 ![image](https://user-images.githubusercontent.com/126889088/236686462-8337ab85-9600-48d3-bd30-300769c0d150.png)
 
