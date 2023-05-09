@@ -1,6 +1,5 @@
 /*Princey's Make.md Spaces Colors
 Inspired by the Rainbow Folders feature in Akifyss' Border theme for Obsidian (https://github.com/Akifyss/obsidian-border)
-Thanks to FireIsGood for helping with making the nth child section more elegant.
 Find this and other snippets in my repository: https://github.com/PrinceHeadache/Princey-Obsidian-Snippets
 
 /* @settings
@@ -186,7 +185,7 @@ div.workspace-tabs div.mk-file-tree button.mk-collapse {
 /* Icons for types of files */
 
 /*.md files*/
-.workspace-leaf-content [data-link-path$=".md"].nav-file-title-content::before {
+.workspace-leaf-content [data-link-path$=".md"], [data-path$=".md"] .nav-file-title-content::before {
     content: "";
     display: inline-block;
     margin-right: 6px;
@@ -196,6 +195,7 @@ div.workspace-tabs div.mk-file-tree button.mk-collapse {
     vertical-align: middle;
 -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3e%3cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z' stroke='%23fff' stroke-width='' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpolyline points='14 2 14 8 20 8' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 }
+
 /*.canvas files*/
 .workspace-leaf-content [data-path$=".canvas"] > .nav-file-title-content::before {
        content: "";
