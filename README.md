@@ -1,9 +1,9 @@
 # Princey-Obsidian-Snippets
 This is my repository for storing and sharing CSS snippets for Obsidian.
+*As of June 25th, it's a bit out of date, sorry about that! I'm working on lots of big changes for the File Browser snippet in particular, so expect an update to that in the near future. Thanks for your patience!*
 
-
-## Princey File Explorer Colors:
-This snippet adds folder and file icons next to your items in the file explorer, and creates a color pattern effect.
+## Princey File Browser Colors:
+This snippet adds folder and file icons next to your items in the file browser, and creates a color pattern effect.
 Supports Make.md Spaces!
 
 ![image](https://user-images.githubusercontent.com/126889088/236686462-8337ab85-9600-48d3-bd30-300769c0d150.png)
@@ -12,7 +12,7 @@ Supported file types with unique icons are:
 - Markdown files: .md
 - Canvas files: .canvas
 - [Excalidraw](https://github.com/excalidraw/excalidraw_) plugin files: .excalidraw.md
-- [Notion-Like Tables](https://github.com/trey-wallis/obsidian-notion-like-tables) plugin files: .table
+- [Obsidian Dashboard]([https://github.com/trey-wallis/obsidian-notion-like-tables](https://github.com/trey-wallis/obsidian-dashboards)) table files: .table
 - MAKE.md context files: .context
 - Archive files: .zip, .7z
 - Image files: .svg, .bmp, .jpeg, .jpg, .png, .gif
