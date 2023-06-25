@@ -35,4 +35,4 @@ I really liked this plugin, but by default it made white cards, which bothered m
 
 # To-do:
 - [ ] Add comments and documentation to all snippets that don't already have them for the sake of clarity.
-- [ ] Assign credit where I haven't already.
+- [ ] Update snippets to most recent versions, making sure to remove features I may have accidentally added that aren't relevant to other users.
